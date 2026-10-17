@@ -1,0 +1,122 @@
+[
+  {
+    "id": "1",
+    "text": "Announcing shadcn/ui v3 - now with AI-powered component generation. Just describe what you want and it scaffolds the perfect component. Check out the demo at https://ui.shadcn.com/v3",
+    "author": "@shadcn",
+    "url": "https://ui.shadcn.com/v3"
+  },
+  {
+    "id": "2",
+    "text": "🚀 10 AI prompts that will change your life! Thread 🧵 (1/47)",
+    "author": "@promptguru",
+    "url": "https://x.com/promptguru/status/123"
+  },
+  {
+    "id": "3",
+    "text": "Built a realtime collaborative whiteboard in Next.js + Supabase. Open source repo: https://github.com/example/collab-board. Uses Supabase Realtime for sync, works great with 50+ concurrent users.",
+    "author": "@devbuilder",
+    "url": "https://github.com/example/collab-board"
+  },
+  {
+    "id": "4",
+    "text": "Just launched our new podcast about startup culture! Episode 1: Why you should quit your job to chase your dreams ✨",
+    "author": "@startuppod",
+    "url": "https://podcasts.example.com/ep1"
+  },
+  {
+    "id": "5",
+    "text": "Vercel just announced next/cache - automatic request deduplication at the edge. Docs here: https://nextjs.org/docs/app/api-reference/functions/cache",
+    "author": "@vercel",
+    "url": "https://nextjs.org/docs/app/api-reference/functions/cache"
+  },
+  {
+    "id": "6",
+    "text": "I asked AI to write my resume and I got 5 job offers in ONE WEEK 😱 Here's my secret... (link in bio)",
+    "author": "@aihacker",
+    "url": "https://aihacker.com/resume-secret"
+  },
+  {
+    "id": "7",
+    "text": "New blog post: Building type-safe database queries with Drizzle ORM. Covers schema definition, migrations, and query builder patterns. https://blog.example.com/drizzle-guide",
+    "author": "@dbdev",
+    "url": "https://blog.example.com/drizzle-guide"
+  },
+  {
+    "id": "8",
+    "text": "Cool visualization showing how React Server Components render on the server vs client. No code, just beautiful animations",
+    "author": "@designdev",
+    "url": "https://visualize.example.com/rsc"
+  },
+  {
+    "id": "9",
+    "text": "Supabase Edge Functions now support Deno 2.0. Migration guide + new features: https://supabase.com/docs/guides/functions/deno-2",
+    "author": "@supabase",
+    "url": "https://supabase.com/docs/guides/functions/deno-2"
+  },
+  {
+    "id": "10",
+    "text": "The 7 laws of software engineering that nobody teaches you (this will blow your mind) 🤯",
+    "author": "@englist",
+    "url": "https://englist.com/7-laws"
+  },
+  {
+    "id": "11",
+    "text": "Implemented a lightweight background job system using Postgres + Vercel Cron. GitHub: https://github.com/example/pg-jobs - 200 LOC, no external deps",
+    "author": "@sideproject",
+    "url": "https://github.com/example/pg-jobs"
+  },
+  {
+    "id": "12",
+    "text": "My latest sourdough bread turned out perfect! 🍞 Anyone else baking this weekend?",
+    "author": "@breadlover",
+    "url": "https://instagram.com/p/breadpic"
+  },
+  {
+    "id": "13",
+    "text": "Demo of AI agents coordinating to build a full-stack app. Watch them discuss architecture, write code, and deploy: https://youtube.com/watch?v=agents-demo",
+    "author": "@airesearch",
+    "url": "https://youtube.com/watch?v=agents-demo"
+  },
+  {
+    "id": "14",
+    "text": "PostgreSQL 17 released! New features include incremental backup, better JSON performance, and logical replication improvements. Release notes: https://postgresql.org/docs/17/release-17.html",
+    "author": "@postgres",
+    "url": "https://postgresql.org/docs/17/release-17.html"
+  },
+  {
+    "id": "15",
+    "text": "ENGAGEMENT HACK: Reply to this tweet with '🔥' to unlock my secret growth strategy",
+    "author": "@growthguru",
+    "url": "https://x.com/growthguru/hack"
+  },
+  {
+    "id": "16",
+    "text": "Tutorial: Building a CLI tool with TypeScript + Clack for beautiful prompts. Repo: https://github.com/example/cli-starter",
+    "author": "@clibuilder",
+    "url": "https://github.com/example/cli-starter"
+  },
+  {
+    "id": "17",
+    "text": "React 19 beta is out! New features: Actions, useOptimistic, use() hook. Full changelog: https://react.dev/blog/2024/04/25/react-19",
+    "author": "@react",
+    "url": "https://react.dev/blog/2024/04/25/react-19"
+  },
+  {
+    "id": "18",
+    "text": "Why I left my $500k FAANG job to become a solopreneur (and you should too)",
+    "author": "@solofounder",
+    "url": "https://blog.solofounder.com/why-i-quit"
+  },
+  {
+    "id": "19",
+    "text": "Created a simple rate limiter middleware for Next.js App Router using Upstash Redis. MIT licensed: https://github.com/example/nextjs-rate-limit",
+    "author": "@middleware",
+    "url": "https://github.com/example/nextjs-rate-limit"
+  },
+  {
+    "id": "20",
+    "text": "Anthropic's new Claude Sonnet 4.5 model is amazing for code generation. Here's my full review with benchmarks and examples: https://blog.example.com/claude-review",
+    "author": "@aireviewer",
+    "url": "https://blog.example.com/claude-review"
+  }
+]
