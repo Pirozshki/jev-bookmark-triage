@@ -49,4 +49,8 @@ export interface TriageWeights {
 export interface TriageConfig {
   weights: TriageWeights;
   confidenceThreshold: number;
+  rankCutoffs: {
+    topPicks: number;
+    skip: number;
+  };
 }

@@ -19,4 +19,8 @@ export const DEFAULT_CONFIG: TriageConfig = {
     },
   },
   confidenceThreshold: 0.6,
+  rankCutoffs: {
+    topPicks: 15,
+    skip: 0,
+  },
 };

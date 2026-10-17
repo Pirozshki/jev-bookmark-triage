@@ -1,9 +1,9 @@
 [
   {
     "id": "1",
-    "text": "Announcing shadcn/ui v3 - now with AI-powered component generation. Just describe what you want and it scaffolds the perfect component. Check out the demo at https://ui.shadcn.com/v3",
-    "author": "@shadcn",
-    "url": "https://ui.shadcn.com/v3"
+    "text": "Announcing ComponentUI v3 - now with AI-powered component generation. Just describe what you want and it scaffolds the perfect component. Check out the demo at https://componentui.example.com/v3",
+    "author": "@uibuilder",
+    "url": "https://componentui.example.com/v3"
   },
   {
     "id": "2",
@@ -13,7 +13,7 @@
   },
   {
     "id": "3",
-    "text": "Built a realtime collaborative whiteboard in Next.js + Supabase. Open source repo: https://github.com/example/collab-board. Uses Supabase Realtime for sync, works great with 50+ concurrent users.",
+    "text": "Built a realtime collaborative whiteboard in Next.js + CloudDB. Open source repo: https://github.com/example/collab-board. Uses CloudDB Realtime for sync, works great with 50+ concurrent users.",
     "author": "@devbuilder",
     "url": "https://github.com/example/collab-board"
   },
@@ -25,9 +25,9 @@
   },
   {
     "id": "5",
-    "text": "Vercel just announced next/cache - automatic request deduplication at the edge. Docs here: https://nextjs.org/docs/app/api-reference/functions/cache",
-    "author": "@vercel",
-    "url": "https://nextjs.org/docs/app/api-reference/functions/cache"
+    "text": "EdgeDeploy just announced next/cache - automatic request deduplication at the edge. Docs here: https://docs.edgedeploy.example.com/cache",
+    "author": "@edgedeployteam",
+    "url": "https://docs.edgedeploy.example.com/cache"
   },
   {
     "id": "6",
@@ -37,9 +37,9 @@
   },
   {
     "id": "7",
-    "text": "New blog post: Building type-safe database queries with Drizzle ORM. Covers schema definition, migrations, and query builder patterns. https://blog.example.com/drizzle-guide",
+    "text": "New blog post: Building type-safe database queries with TypeORM Pro. Covers schema definition, migrations, and query builder patterns. https://blog.example.com/typeorm-guide",
     "author": "@dbdev",
-    "url": "https://blog.example.com/drizzle-guide"
+    "url": "https://blog.example.com/typeorm-guide"
   },
   {
     "id": "8",
@@ -49,9 +49,9 @@
   },
   {
     "id": "9",
-    "text": "Supabase Edge Functions now support Deno 2.0. Migration guide + new features: https://supabase.com/docs/guides/functions/deno-2",
-    "author": "@supabase",
-    "url": "https://supabase.com/docs/guides/functions/deno-2"
+    "text": "CloudDB Edge Functions now support Deno 2.0. Migration guide + new features: https://clouddb.example.com/docs/guides/functions/deno-2",
+    "author": "@clouddbteam",
+    "url": "https://clouddb.example.com/docs/guides/functions/deno-2"
   },
   {
     "id": "10",
@@ -61,7 +61,7 @@
   },
   {
     "id": "11",
-    "text": "Implemented a lightweight background job system using Postgres + Vercel Cron. GitHub: https://github.com/example/pg-jobs - 200 LOC, no external deps",
+    "text": "Implemented a lightweight background job system using Postgres + Edge Cron. GitHub: https://github.com/example/pg-jobs - 200 LOC, no external deps",
     "author": "@sideproject",
     "url": "https://github.com/example/pg-jobs"
   },
@@ -80,7 +80,7 @@
   {
     "id": "14",
     "text": "PostgreSQL 17 released! New features include incremental backup, better JSON performance, and logical replication improvements. Release notes: https://postgresql.org/docs/17/release-17.html",
-    "author": "@postgres",
+    "author": "@postgresofficial",
     "url": "https://postgresql.org/docs/17/release-17.html"
   },
   {
@@ -97,9 +97,9 @@
   },
   {
     "id": "17",
-    "text": "React 19 beta is out! New features: Actions, useOptimistic, use() hook. Full changelog: https://react.dev/blog/2024/04/25/react-19",
-    "author": "@react",
-    "url": "https://react.dev/blog/2024/04/25/react-19"
+    "text": "ReactJS 19 beta is out! New features: Actions, useOptimistic, use() hook. Full changelog: https://react.example.dev/blog/2024/04/25/react-19",
+    "author": "@reactdevs",
+    "url": "https://react.example.dev/blog/2024/04/25/react-19"
   },
   {
     "id": "18",
@@ -109,14 +109,14 @@
   },
   {
     "id": "19",
-    "text": "Created a simple rate limiter middleware for Next.js App Router using Upstash Redis. MIT licensed: https://github.com/example/nextjs-rate-limit",
-    "author": "@middleware",
+    "text": "Created a simple rate limiter middleware for Next.js App Router using Redis Cloud. MIT licensed: https://github.com/example/nextjs-rate-limit",
+    "author": "@middlewaredev",
     "url": "https://github.com/example/nextjs-rate-limit"
   },
   {
     "id": "20",
-    "text": "Anthropic's new Claude Sonnet 4.5 model is amazing for code generation. Here's my full review with benchmarks and examples: https://blog.example.com/claude-review",
+    "text": "SmartAI's new Sonnet 4.5 model is amazing for code generation. Here's my full review with benchmarks and examples: https://blog.example.com/smartai-review",
     "author": "@aireviewer",
-    "url": "https://blog.example.com/claude-review"
+    "url": "https://blog.example.com/smartai-review"
   }
 ]

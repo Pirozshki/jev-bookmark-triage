@@ -46,7 +46,7 @@ npm install
 npm run dev
 ```
 
-Open [http://localhost:43123](http://localhost:43123)
+Open [http://localhost:3000](http://localhost:3000)
 
 The app uses deterministic mock responses. All checks pass:
 
@@ -56,6 +56,8 @@ npm run lint       # ESLint
 npm test           # Vitest unit tests
 npm run build      # Production build
 ```
+
+**Note**: Next.js telemetry is disabled via `NEXT_TELEMETRY_DISABLED=1` in the npm scripts.
 
 ### Real Mode (With TypeSafe API Key)
 
@@ -115,7 +117,7 @@ Items with rank ≥15 go to "Top picks" (if confidence is high enough).
 Items with rank <0 go to "Skip".  
 Everything else (or low-confidence items) goes to "Needs human look".
 
-The unit tests verify that weight changes correctly reorder results.
+The unit tests verify that weight changes correctly reorder results. Cutoff values are configurable in `lib/config.ts`.
 
 ## Known Limitations
 

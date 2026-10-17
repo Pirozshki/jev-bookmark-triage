@@ -36,9 +36,9 @@ export function determineBucket(
     return "needs-review";
   }
 
-  if (rank >= 15) {
+  if (rank >= config.rankCutoffs.topPicks) {
     return "top-picks";
-  } else if (rank >= 0) {
+  } else if (rank >= config.rankCutoffs.skip) {
     return "needs-review";
   } else {
     return "skip";

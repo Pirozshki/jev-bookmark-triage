@@ -5,9 +5,23 @@ import type { Bookmark, Category, StackFit, JevAnswers } from "./types";
  * This allows the app to work without a real API key for development and testing.
  */
 export class MockTypeSafeClient {
-  async systemOne({ state }: { state: { bookmark: Bookmark }; questions: unknown; model?: string }): Promise<{
+  public callCount = 0;
+  public lastCall: { state: unknown; questions: unknown; model?: string } | null = null;
+
+  async systemOne({
+    state,
+    questions,
+    model,
+  }: {
+    state: { bookmark: Bookmark };
+    questions: unknown;
+    model?: string;
+  }): Promise<{
     answers: JevAnswers;
   }> {
+    this.callCount++;
+    this.lastCall = { state, questions, model };
+
     const text = state.bookmark.text.toLowerCase();
     const url = state.bookmark.url.toLowerCase();
 
