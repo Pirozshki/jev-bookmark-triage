@@ -1,5 +1,5 @@
 import { describe, it, expect, vi, beforeEach, afterEach } from "vitest";
-import { triageBookmark, QUESTIONS, ValidationError } from "@/lib/jev-client";
+import { triageBookmark, QUESTIONS } from "@/lib/jev-client";
 import { MockTypeSafeClient } from "@/lib/mock-client";
 import type { Bookmark } from "@/lib/types";
 
