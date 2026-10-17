@@ -15,6 +15,7 @@ This app demonstrates:
 - **Confidence-gated routing**: Items with low average confidence go to "Needs human look" regardless of rank
 - **Privacy-first**: All processing happens server-side in a Next.js route handler; nothing is persisted
 - **Mock mode by default**: Works without an API key using deterministic mock responses for development and testing
+- **Request validation**: Maximum 50 bookmarks per request with zod validation
 
 ### Files
 

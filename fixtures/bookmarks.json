@@ -2,121 +2,121 @@
   {
     "id": "1",
     "text": "Announcing ComponentUI v3 - now with AI-powered component generation. Just describe what you want and it scaffolds the perfect component. Check out the demo at https://componentui.example.com/v3",
-    "author": "@uibuilder",
+    "author": "@fixture_ui_builder",
     "url": "https://componentui.example.com/v3"
   },
   {
     "id": "2",
     "text": "🚀 10 AI prompts that will change your life! Thread 🧵 (1/47)",
-    "author": "@promptguru",
-    "url": "https://x.com/promptguru/status/123"
+    "author": "@demo_prompt_guy",
+    "url": "https://promptthreads.example.com/123"
   },
   {
     "id": "3",
-    "text": "Built a realtime collaborative whiteboard in Next.js + CloudDB. Open source repo: https://github.com/example/collab-board. Uses CloudDB Realtime for sync, works great with 50+ concurrent users.",
-    "author": "@devbuilder",
-    "url": "https://github.com/example/collab-board"
+    "text": "Built a realtime collaborative whiteboard in Next.js + CloudDB. Open source repo: https://code.example.com/collab-board. Uses CloudDB Realtime for sync, works great with 50+ concurrent users.",
+    "author": "@fixture_dev_builder",
+    "url": "https://code.example.com/collab-board"
   },
   {
     "id": "4",
     "text": "Just launched our new podcast about startup culture! Episode 1: Why you should quit your job to chase your dreams ✨",
-    "author": "@startuppod",
+    "author": "@demo_startup_pod",
     "url": "https://podcasts.example.com/ep1"
   },
   {
     "id": "5",
     "text": "EdgeDeploy just announced next/cache - automatic request deduplication at the edge. Docs here: https://docs.edgedeploy.example.com/cache",
-    "author": "@edgedeployteam",
+    "author": "@fixture_edge_deploy",
     "url": "https://docs.edgedeploy.example.com/cache"
   },
   {
     "id": "6",
     "text": "I asked AI to write my resume and I got 5 job offers in ONE WEEK 😱 Here's my secret... (link in bio)",
-    "author": "@aihacker",
-    "url": "https://aihacker.com/resume-secret"
+    "author": "@demo_ai_hacker",
+    "url": "https://aihacker.example.com/resume-secret"
   },
   {
     "id": "7",
-    "text": "New blog post: Building type-safe database queries with TypeORM Pro. Covers schema definition, migrations, and query builder patterns. https://blog.example.com/typeorm-guide",
-    "author": "@dbdev",
-    "url": "https://blog.example.com/typeorm-guide"
+    "text": "New blog post: Building type-safe database queries with TypeORM Pro. Covers schema definition, migrations, and query builder patterns. https://devblog.example.com/typeorm-guide",
+    "author": "@fixture_db_dev",
+    "url": "https://devblog.example.com/typeorm-guide"
   },
   {
     "id": "8",
     "text": "Cool visualization showing how React Server Components render on the server vs client. No code, just beautiful animations",
-    "author": "@designdev",
+    "author": "@demo_design_dev",
     "url": "https://visualize.example.com/rsc"
   },
   {
     "id": "9",
-    "text": "CloudDB Edge Functions now support Deno 2.0. Migration guide + new features: https://clouddb.example.com/docs/guides/functions/deno-2",
-    "author": "@clouddbteam",
-    "url": "https://clouddb.example.com/docs/guides/functions/deno-2"
+    "text": "CloudDB Edge Functions now support Deno 2.0. Migration guide + new features: https://clouddb.example.com/docs/deno-2",
+    "author": "@fixture_clouddb",
+    "url": "https://clouddb.example.com/docs/deno-2"
   },
   {
     "id": "10",
     "text": "The 7 laws of software engineering that nobody teaches you (this will blow your mind) 🤯",
-    "author": "@englist",
-    "url": "https://englist.com/7-laws"
+    "author": "@demo_eng_list",
+    "url": "https://englist.example.com/7-laws"
   },
   {
     "id": "11",
-    "text": "Implemented a lightweight background job system using Postgres + Edge Cron. GitHub: https://github.com/example/pg-jobs - 200 LOC, no external deps",
-    "author": "@sideproject",
-    "url": "https://github.com/example/pg-jobs"
+    "text": "Implemented a lightweight background job system using DataStore + Edge Cron. Code: https://code.example.com/pg-jobs - 200 LOC, no external deps",
+    "author": "@fixture_side_project",
+    "url": "https://code.example.com/pg-jobs"
   },
   {
     "id": "12",
     "text": "My latest sourdough bread turned out perfect! 🍞 Anyone else baking this weekend?",
-    "author": "@breadlover",
-    "url": "https://instagram.com/p/breadpic"
+    "author": "@demo_bread_lover",
+    "url": "https://photos.example.com/p/breadpic"
   },
   {
     "id": "13",
-    "text": "Demo of AI agents coordinating to build a full-stack app. Watch them discuss architecture, write code, and deploy: https://youtube.com/watch?v=agents-demo",
-    "author": "@airesearch",
-    "url": "https://youtube.com/watch?v=agents-demo"
+    "text": "Demo of AI agents coordinating to build a full-stack app. Watch them discuss architecture, write code, and deploy: https://videos.example.com/watch?v=agents-demo",
+    "author": "@fixture_ai_research",
+    "url": "https://videos.example.com/watch?v=agents-demo"
   },
   {
     "id": "14",
-    "text": "PostgreSQL 17 released! New features include incremental backup, better JSON performance, and logical replication improvements. Release notes: https://postgresql.org/docs/17/release-17.html",
-    "author": "@postgresofficial",
-    "url": "https://postgresql.org/docs/17/release-17.html"
+    "text": "DataStore 17 released! New features include incremental backup, better JSON performance, and logical replication improvements. Release notes: https://datastore.example.com/docs/17/release-17.html",
+    "author": "@demo_datastore_team",
+    "url": "https://datastore.example.com/docs/17/release-17.html"
   },
   {
     "id": "15",
     "text": "ENGAGEMENT HACK: Reply to this tweet with '🔥' to unlock my secret growth strategy",
-    "author": "@growthguru",
-    "url": "https://x.com/growthguru/hack"
+    "author": "@fixture_growth_guru",
+    "url": "https://social.example.com/growth/hack"
   },
   {
     "id": "16",
-    "text": "Tutorial: Building a CLI tool with TypeScript + Clack for beautiful prompts. Repo: https://github.com/example/cli-starter",
-    "author": "@clibuilder",
-    "url": "https://github.com/example/cli-starter"
+    "text": "Tutorial: Building a CLI tool with TypeScript + Clack for beautiful prompts. Repo: https://code.example.com/cli-starter",
+    "author": "@demo_cli_builder",
+    "url": "https://code.example.com/cli-starter"
   },
   {
     "id": "17",
-    "text": "ReactJS 19 beta is out! New features: Actions, useOptimistic, use() hook. Full changelog: https://react.example.dev/blog/2024/04/25/react-19",
-    "author": "@reactdevs",
-    "url": "https://react.example.dev/blog/2024/04/25/react-19"
+    "text": "JSFramework 19 beta is out! New features: Actions, useOptimistic, use() hook. Full changelog: https://jsframework.example.dev/blog/2024/04/25/v19",
+    "author": "@fixture_jsframework",
+    "url": "https://jsframework.example.dev/blog/2024/04/25/v19"
   },
   {
     "id": "18",
     "text": "Why I left my $500k FAANG job to become a solopreneur (and you should too)",
-    "author": "@solofounder",
-    "url": "https://blog.solofounder.com/why-i-quit"
+    "author": "@demo_solo_founder",
+    "url": "https://blog.solofounder.example.com/why-i-quit"
   },
   {
     "id": "19",
-    "text": "Created a simple rate limiter middleware for Next.js App Router using Redis Cloud. MIT licensed: https://github.com/example/nextjs-rate-limit",
-    "author": "@middlewaredev",
-    "url": "https://github.com/example/nextjs-rate-limit"
+    "text": "Created a simple rate limiter middleware for Next.js App Router using Redis Cloud. MIT licensed: https://code.example.com/nextjs-rate-limit",
+    "author": "@fixture_middleware_dev",
+    "url": "https://code.example.com/nextjs-rate-limit"
   },
   {
     "id": "20",
-    "text": "SmartAI's new Sonnet 4.5 model is amazing for code generation. Here's my full review with benchmarks and examples: https://blog.example.com/smartai-review",
-    "author": "@aireviewer",
+    "text": "SmartAI's new reasoning model is amazing for code generation. Here's my full review with benchmarks and examples: https://blog.example.com/smartai-review",
+    "author": "@demo_ai_reviewer",
     "url": "https://blog.example.com/smartai-review"
   }
 ]

@@ -22,9 +22,20 @@ export const StackFitSchema = z.enum([
   "none",
 ]);
 
-export const ChoiceAnswerSchema = z.object({
-  choice: CategorySchema.or(StackFitSchema),
-  probabilities: z.record(z.string(), z.number()),
+export const NoulAnswerSchema = z.object({
+  noul: z.number(),
+});
+
+// Separate schemas for each Choice question to ensure correct enums
+export const CategoryAnswerSchema = z.object({
+  choice: CategorySchema,
+  probabilities: z.record(CategorySchema, z.number()),
+  confidence: z.number(),
+});
+
+export const StackFitAnswerSchema = z.object({
+  choice: StackFitSchema,
+  probabilities: z.record(StackFitSchema, z.number()),
   confidence: z.number(),
 });
 
@@ -35,13 +46,10 @@ export const ScoreAnswerSchema = z.object({
   legend: z.record(z.string(), z.string()).optional(),
 });
 
-export const NoulAnswerSchema = z.object({
-  noul: z.number(),
-});
-
-export const JevAnswersSchema = z.object({
-  category: ChoiceAnswerSchema,
+// Raw SDK response schema
+export const RawJevResponseSchema = z.object({
+  category: CategoryAnswerSchema,
   demoability: ScoreAnswerSchema,
   has_primary_source: NoulAnswerSchema,
-  stack_fit: ChoiceAnswerSchema,
+  stack_fit: StackFitAnswerSchema,
 });

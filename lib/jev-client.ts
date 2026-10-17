@@ -1,6 +1,7 @@
 import { TypeSafeClient, choice, score, noul } from "@typesafe-ai/sdk";
-import type { Bookmark, JevAnswers, Category, StackFit } from "./types";
+import type { Bookmark, JevAnswers } from "./types";
 import { MockTypeSafeClient } from "./mock-client";
+import { RawJevResponseSchema } from "./validation";
 
 const MODEL = "jev-1.14.0";
 
@@ -28,6 +29,13 @@ export const QUESTIONS = {
     "none": "Does not fit any of the above categories",
   }),
 };
+
+export class ValidationError extends Error {
+  constructor(message: string) {
+    super(message);
+    this.name = "ValidationError";
+  }
+}
 
 export async function triageBookmark(bookmark: Bookmark): Promise<JevAnswers> {
   const useMock = !process.env.TYPESAFE_API_KEY;
@@ -63,24 +71,37 @@ export async function triageBookmark(bookmark: Bookmark): Promise<JevAnswers> {
     questions: QUESTIONS,
   });
 
+  // Validate raw SDK response before mapping
+  const validationResult = RawJevResponseSchema.safeParse(response.answers);
+
+  if (!validationResult.success) {
+    throw new ValidationError(
+      `Invalid SDK response: ${validationResult.error.message}`
+    );
+  }
+
+  const validated = validationResult.data;
+
+  // Map to our internal type, carrying through the legend
   return {
     category: {
-      choice: response.answers.category.choice as Category,
-      probabilities: response.answers.category.probabilities as Record<Category, number>,
-      confidence: response.answers.category.confidence,
+      choice: validated.category.choice,
+      probabilities: validated.category.probabilities,
+      confidence: validated.category.confidence,
     },
     demoability: {
-      score: response.answers.demoability.score,
-      probabilities: response.answers.demoability.probabilities,
-      confidence: response.answers.demoability.confidence,
+      score: validated.demoability.score,
+      probabilities: validated.demoability.probabilities,
+      confidence: validated.demoability.confidence,
+      legend: validated.demoability.legend,
     },
     has_primary_source: {
-      noul: response.answers.has_primary_source.noul,
+      noul: validated.has_primary_source.noul,
     },
     stack_fit: {
-      choice: response.answers.stack_fit.choice as StackFit,
-      probabilities: response.answers.stack_fit.probabilities as Record<StackFit, number>,
-      confidence: response.answers.stack_fit.confidence,
+      choice: validated.stack_fit.choice,
+      probabilities: validated.stack_fit.probabilities,
+      confidence: validated.stack_fit.confidence,
     },
   };
 }

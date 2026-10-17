@@ -9,7 +9,7 @@
   "scripts": {
     "dev": "NEXT_TELEMETRY_DISABLED=1 next dev",
     "build": "NEXT_TELEMETRY_DISABLED=1 next build",
-    "start": "next start",
+    "start": "NEXT_TELEMETRY_DISABLED=1 next start",
     "lint": "eslint",
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
@@ -35,7 +35,6 @@
     "eslint": "^9",
     "eslint-config-next": "16.4.2",
     "happy-dom": "^21.0.3",
-    "sharp": "^0.35.5",
     "tailwindcss": "^4",
     "tsx": "^4.23.15",
     "typescript": "^5",

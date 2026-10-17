@@ -1,8 +1,9 @@
 import { NextResponse } from "next/server";
 import { z } from "zod";
-import { triageBookmark } from "@/lib/jev-client";
+import { triageBookmark, ValidationError } from "@/lib/jev-client";
 import { triageBookmarks } from "@/lib/triage";
-import { BookmarkSchema, JevAnswersSchema } from "@/lib/validation";
+import { BookmarkSchema } from "@/lib/validation";
+import type { JevAnswers } from "@/lib/types";
 
 const MAX_BOOKMARKS = 50;
 
@@ -31,26 +32,67 @@ export async function POST(request: Request) {
 
     const { bookmarks } = parseResult.data;
 
-    const answersMap = new Map();
+    const answersMap = new Map<string, JevAnswers>();
+    const validationErrors: string[] = [];
 
     for (const bookmark of bookmarks) {
-      const rawAnswers = await triageBookmark(bookmark);
-
-      const validationResult = JevAnswersSchema.safeParse(rawAnswers);
-      if (!validationResult.success) {
-        console.error("SDK response validation failed:", validationResult.error);
-        return NextResponse.json(
-          { error: "Invalid response from triage service", details: validationResult.error.issues },
-          { status: 500 }
-        );
+      try {
+        const answers = await triageBookmark(bookmark);
+        answersMap.set(bookmark.id, answers);
+      } catch (error) {
+        if (error instanceof ValidationError) {
+          console.error(`Validation error for bookmark ${bookmark.id}:`, error.message);
+          validationErrors.push(bookmark.id);
+          
+          // Route to "needs-review" by providing neutral answers that will result in low confidence
+          answersMap.set(bookmark.id, {
+            category: {
+              choice: "off-topic",
+              probabilities: {
+                "demoable-new-tech": 0.25,
+                "how-to/opinion": 0.25,
+                "hype/engagement-bait": 0.25,
+                "off-topic": 0.25,
+              },
+              confidence: 0.0,
+            },
+            demoability: {
+              score: 0,
+              probabilities: { 0: 1, 1: 0, 2: 0, 3: 0 },
+              confidence: 0.0,
+            },
+            has_primary_source: {
+              noul: 0.5,
+            },
+            stack_fit: {
+              choice: "none",
+              probabilities: {
+                "nextjs-react": 0.2,
+                "supabase/postgres": 0.2,
+                "vercel/deploy": 0.2,
+                "ai-agents/automation": 0.2,
+                "none": 0.2,
+              },
+              confidence: 0.0,
+            },
+          });
+        } else {
+          throw error;
+        }
       }
-
-      answersMap.set(bookmark.id, validationResult.data);
     }
 
     const results = triageBookmarks(bookmarks, answersMap);
 
-    return NextResponse.json({ results });
+    return NextResponse.json({ 
+      results,
+      ...(validationErrors.length > 0 && { 
+        warnings: {
+          validation_errors: validationErrors,
+          message: "Some bookmarks had validation errors and were routed to needs-review"
+        }
+      })
+    });
   } catch (error) {
     console.error("Triage error:", error);
     return NextResponse.json(

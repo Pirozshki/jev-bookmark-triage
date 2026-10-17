@@ -21,6 +21,7 @@ export interface JevAnswers {
     score: number;
     probabilities: Record<number, number>;
     confidence: number;
+    legend?: Record<string, string>;
   };
   has_primary_source: {
     noul: number;
