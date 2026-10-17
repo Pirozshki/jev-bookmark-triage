@@ -54,10 +54,22 @@ export async function triageBookmark(bookmark: Bookmark): Promise<JevAnswers> {
       questions: QUESTIONS,
       model: MODEL,
     });
-    return response.answers;
+
+    // Validate mock response through the same schema
+    const validationResult = RawJevResponseSchema.safeParse(response.answers);
+    if (!validationResult.success) {
+      throw new ValidationError(
+        `Invalid Jev response for bookmark ${bookmark.id}: ${validationResult.error.message}`
+      );
+    }
+
+    return validationResult.data;
   }
 
-  const client = new TypeSafeClient({ defaultModel: MODEL });
+  const client = new TypeSafeClient({ 
+    defaultModel: MODEL,
+    dangerouslyAllowBrowser: true,
+  });
 
   const response = await client.systemOne({
     state: {

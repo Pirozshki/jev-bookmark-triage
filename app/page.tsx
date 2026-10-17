@@ -4,14 +4,21 @@ import { useState, useEffect } from "react";
 import type { TriageResult } from "@/lib/types";
 import bookmarksData from "@/fixtures/bookmarks.json";
 
-function BookmarkCard({ result }: { result: TriageResult }) {
+function BookmarkCard({ result, validationFailed }: { result: TriageResult; validationFailed?: boolean }) {
   const { bookmark, answers, rank } = result;
 
   return (
     <div className="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-4 hover:shadow-md transition-shadow">
       <div className="flex items-start justify-between gap-3 mb-3">
         <div className="flex-1 min-w-0">
-          <p className="text-sm text-gray-900 dark:text-gray-100 mb-1">{bookmark.text}</p>
+          <div className="flex items-center gap-2 mb-1">
+            <p className="text-sm text-gray-900 dark:text-gray-100 flex-1">{bookmark.text}</p>
+            {validationFailed && (
+              <span className="shrink-0 px-2 py-0.5 text-xs font-medium bg-amber-100 dark:bg-amber-900/30 text-amber-800 dark:text-amber-200 rounded border border-amber-300 dark:border-amber-700">
+                validation failed
+              </span>
+            )}
+          </div>
           <div className="flex items-center gap-2 text-xs text-gray-500 dark:text-gray-400">
             <span>{bookmark.author}</span>
             <span>•</span>
@@ -98,6 +105,7 @@ export default function Home() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [mode, setMode] = useState<"mock" | "real">("mock");
+  const [validationErrors, setValidationErrors] = useState<string[]>([]);
 
   useEffect(() => {
     async function triage() {
@@ -117,6 +125,10 @@ export default function Home() {
 
         const data = await response.json();
         setResults(data.results);
+        
+        if (data.warnings?.validation_errors) {
+          setValidationErrors(data.warnings.validation_errors);
+        }
 
         const hasKey = typeof window !== "undefined" && document.cookie.includes("has_typesafe_key");
         setMode(hasKey ? "real" : "mock");
@@ -167,7 +179,11 @@ export default function Home() {
               </div>
               <div className="space-y-3">
                 {topPicks.map((result) => (
-                  <BookmarkCard key={result.bookmark.id} result={result} />
+                  <BookmarkCard 
+                    key={result.bookmark.id} 
+                    result={result}
+                    validationFailed={validationErrors.includes(result.bookmark.id)}
+                  />
                 ))}
               </div>
             </div>
@@ -183,7 +199,11 @@ export default function Home() {
               </div>
               <div className="space-y-3">
                 {needsReview.map((result) => (
-                  <BookmarkCard key={result.bookmark.id} result={result} />
+                  <BookmarkCard 
+                    key={result.bookmark.id} 
+                    result={result}
+                    validationFailed={validationErrors.includes(result.bookmark.id)}
+                  />
                 ))}
               </div>
             </div>
@@ -197,7 +217,11 @@ export default function Home() {
               </div>
               <div className="space-y-3">
                 {skip.map((result) => (
-                  <BookmarkCard key={result.bookmark.id} result={result} />
+                  <BookmarkCard 
+                    key={result.bookmark.id} 
+                    result={result}
+                    validationFailed={validationErrors.includes(result.bookmark.id)}
+                  />
                 ))}
               </div>
             </div>
