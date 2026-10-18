@@ -131,7 +131,11 @@ export class MockTypeSafeClient {
   } {
     let level = 0;
 
-    const hasRepo = url.includes("github.com") || text.includes("repo:") || text.includes("open source");
+    const hasRepo = 
+      url.includes("github.com") || 
+      url.includes("code.example.com") ||
+      text.includes("repo:") || 
+      text.includes("open source");
     const hasDocs = url.includes("/docs/") || text.includes("docs here:");
     const hasDemo = text.includes("demo") || text.includes("built a");
     const isSmallScope =
@@ -175,7 +179,10 @@ export class MockTypeSafeClient {
 
   private checkPrimarySource(text: string, url: string): number {
     const hasDocs = url.includes("/docs/") || url.includes("/doc/") || url.includes("documentation");
-    const hasRepo = url.includes("github.com") || url.includes("gitlab.com");
+    const hasRepo = 
+      url.includes("github.com") || 
+      url.includes("gitlab.com") ||
+      url.includes("code.example.com");
     const hasOfficialAnnouncement = url.includes("blog") && (text.includes("announcing") || text.includes("released"));
     const isVideoOnly = url.includes("youtube.com") || url.includes("video");
     const isScreenshotOnly = url.includes("instagram.com") || text.includes("visualization showing");

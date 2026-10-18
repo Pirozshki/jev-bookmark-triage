@@ -1,3 +1,4 @@
+import "server-only";
 import { TypeSafeClient, choice, score, noul } from "@typesafe-ai/sdk";
 import type { Bookmark, JevAnswers } from "./types";
 import { MockTypeSafeClient } from "./mock-client";
@@ -68,7 +69,6 @@ export async function triageBookmark(bookmark: Bookmark): Promise<JevAnswers> {
 
   const client = new TypeSafeClient({ 
     defaultModel: MODEL,
-    dangerouslyAllowBrowser: true,
   });
 
   const response = await client.systemOne({
